@@ -136,10 +136,10 @@ section {
   <nav>
     <div class="logo"></div>
     <ul>
-      <li><a href=""></a>HOME</li>
-      <li><a href=""></a>CONTACT</li>
-      <li><a href=""></a>FEEDBACK</li>
-      <li><a href=""></a>ABOUT</li>
+      <li><a href="#"></a>HOME</li>
+      <li><a href="#"></a>CONTACT</li>
+      <li><a href="#"></a>FEEDBACK</li>
+      <li><a href="#"></a>ABOUT</li>
     </ul>
   </nav>
 <div class="header">
@@ -159,29 +159,5 @@ section {
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum fuga voluptatem dolores sequi reprehenderit ipsam maiores aspernatur soluta dignissimos maxime ipsum dolor ut aliquid, aut quidem eaque assumenda? Beatae, placeat!</p>
 </section>
 
-<script>
-  var $headline = $('.headline'),
-    $inner = $('.inner'),
-    $nav = $('nav'),
-    navHeight = 75;
-
-$(window).scroll(function() {
-  var scrollTop = $(this).scrollTop(),
-      headlineHeight = $headline.outerHeight() - navHeight,
-      navOffset = $nav.offset().top;
-
-  $headline.css({
-    'opacity': (1 - scrollTop / headlineHeight)
-  });
-  $inner.children().css({
-    'transform': 'translateY('+ scrollTop * 0.4 +'px)'
-  });
-  if (navOffset > headlineHeight) {
-    $nav.addClass('scrolled');
-  } else {
-    $nav.removeClass('scrolled');
-  }
-});
-</script>
 </body>
 </html>
